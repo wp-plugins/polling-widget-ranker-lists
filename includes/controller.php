@@ -17,18 +17,19 @@ function rnkrwp_place_scripts(){
 	function rnkrwp_place_defaults(){
 		
 		//Get preferences
-		$rnkrwp_prefs			= get_option( 'rnkrwp' );
-		$header_show_image		= $rnkrwp_prefs['header_show_image'];
-		$header_show_username	= $rnkrwp_prefs['header_show_username'];
-		$header_show_criteria	= $rnkrwp_prefs['header_show_criteria'];
-		$header_bgcolor			= $rnkrwp_prefs['header_bgcolor'];
-		$header_fontcolor		= $rnkrwp_prefs['header_fontcolor'];
-		$header_fontface		= $rnkrwp_prefs['header_fontface'];
-		$list_displaythumbnails	= $rnkrwp_prefs['list_displaythumbnails'];
-		$list_slidebgcolor		= $rnkrwp_prefs['list_slidebgcolor'];
-		$list_fontcolor			= $rnkrwp_prefs['list_fontcolor'];
-		$list_fontface			= $rnkrwp_prefs['list_fontface'];
-		$footer_bgcolor			= $rnkrwp_prefs['footer_bgcolor'];
+		$rnkrwp_prefs				= get_option( 'rnkrwp' );
+		$header_show_image			= $rnkrwp_prefs['header_show_image'];
+		$header_show_username		= $rnkrwp_prefs['header_show_username'];
+		$header_show_criteria		= $rnkrwp_prefs['header_show_criteria'];
+		$header_bgcolor				= $rnkrwp_prefs['header_bgcolor'];
+		$header_fontcolor			= $rnkrwp_prefs['header_fontcolor'];
+		$header_fontface			= $rnkrwp_prefs['header_fontface'];
+		$list_displaythumbnails		= $rnkrwp_prefs['list_displaythumbnails'];
+		$list_displaydescriptions	= $rnkrwp_prefs['list_displaydescriptions'];
+		$list_slidebgcolor			= $rnkrwp_prefs['list_slidebgcolor'];
+		$list_fontcolor				= $rnkrwp_prefs['list_fontcolor'];
+		$list_fontface				= $rnkrwp_prefs['list_fontface'];
+		$footer_bgcolor				= $rnkrwp_prefs['footer_bgcolor'];
 		
 		//Adjust color values
 		$header_bgcolor			= preg_replace('(\#)', '', $header_bgcolor);
@@ -62,6 +63,12 @@ function rnkrwp_place_scripts(){
 		else{
 			$list_displaythumbnails	= 'false';
 		}
+		if( $list_displaydescriptions ){
+			$list_displaydescriptions	= 'true';
+		}
+		else{
+			$list_displaydescriptions	= 'false';
+		}
 		
 		//Build HTML output
 		$defaultHTML = '<script>var RNKRW = RNKRW || {};';
@@ -75,10 +82,11 @@ function rnkrwp_place_scripts(){
 				$defaultHTML .= 'fontcolor	: "'.$header_fontcolor.'"';
 			$defaultHTML .= '},';
 			$defaultHTML .= 'list	: {';
-				$defaultHTML .= 'displaythumbnails	: '.$list_displaythumbnails.',';
-				$defaultHTML .= 'slidebgcolor		: "'.$list_slidebgcolor.'",';
-				$defaultHTML .= 'fontface			: "'.$list_fontface.'",';
-				$defaultHTML .= 'fontcolor			: "'.$list_fontcolor.'"';
+				$defaultHTML .= 'displaythumbnails		: '.$list_displaythumbnails.',';
+				$defaultHTML .= 'displaydescriptions	: '.$list_displaydescriptions.',';
+				$defaultHTML .= 'slidebgcolor			: "'.$list_slidebgcolor.'",';
+				$defaultHTML .= 'fontface				: "'.$list_fontface.'",';
+				$defaultHTML .= 'fontcolor				: "'.$list_fontcolor.'"';
 			$defaultHTML .= '},';
 			$defaultHTML .= 'footer	: {';
 				$defaultHTML .= 'bgcolor	: "'.$footer_bgcolor.'"';
