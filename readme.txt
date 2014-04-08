@@ -4,7 +4,7 @@ Donate link: http://www.ranker.com/
 Tags: poll, polls, polling, survey, list, lists, rate, ranking, Ranker, vote, voting, community, sidebar
 Requires at least: 3.4
 Tested up to: 3.8.1
-Stable tag: 2.1.1
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,12 +66,18 @@ For more information on using Ranker widgets please see the [Widget Info page](h
 
 == Changelog ==
 
+= 2.2.0 =
+- Responding to plugin user feedback, we've reworked some code and now widgets can have all of their header items (including list name) turned off.
+- Included in this update are some major widget styling changes: The widget now has a more generic look by default to allow for easier site integration.
+- CSS interference between your existing themes and the widget should be greatly reduced.
+- We've also run a pass on de-cluttering the header and footer: Sharing icons have been moved to the footer and display in a more neutral color. Footer button functionality has been changed to text links.
+
 = 2.1.1 =
 - Added an option to the Ranker settings panel to allow turning item descriptions off for slideshow widgets.
 - Removed reactive widget messaging.
 
 = 2.1.0 =
-The Slideshow/Mobile widget update! See below for a full list of features and changes;
+- The Slideshow/Mobile widget update! See below for a full list of features and changes;
 - NEW! Slideshow widgets are now enabled in the plugin. Any list you embed that is defaulted to slideshow view will show in this new format. Older widget shortcodes will need to be updated to enable the new view (we chose this option to best serve your original embed intent).
 - The widget code is now fully reactive and will adjust to your themes width, this allows for proper widget display on mobile platforms. This change will be rolled out to all lists, including your older embeds. To fix a widget at a specific size you should place the shortcode in a container (div, p etc).
 - Related to the above: Widget width options have been removed from the settings panel. A note regarding the change is in its place and will be removed at a later date.
@@ -85,6 +91,9 @@ The version 2 polling widget has been completely rewritten from the ground up us
 
 
 == Upgrade Notice ==
+
+= 2.2.0 =
+Settings and widget styling updates, recommended for all users.
 
 = 2.1.1 =
 Minor update to slideshow widget display options, upgrade for additional slideshow control. Low priority patch, but recommended.
