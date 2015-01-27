@@ -3,7 +3,7 @@
 Plugin Name: Polling Widget: Ranker Lists
 Plugin URI: http://www.ranker.com/widget
 Description: Use the Ranker polling widget to create a custom "ranking poll" -a highly engaging crowdsourced list that will increase time on page by 125% and commenting 3X.
-Version: 2.2.2
+Version: 2.2.3
 Author: Ranker, Inc
 Author URI: http://www.ranker.com
 License: GPL2
@@ -33,7 +33,7 @@ License: GPL2
  */
 
 //Define Constants
-define( 'RNKRWP_VERSION', '2.2.2' );
+define( 'RNKRWP_VERSION', '2.2.3' );
 define( 'RNKRWP_REQUIRED_WP_VERSION', '3.4' );
 
 if(!defined( 'RNKRWP_PLUGIN_BASENAME' )) define( 'RNKRWP_PLUGIN_BASENAME', plugin_basename(__FILE__) );
