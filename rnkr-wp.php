@@ -3,14 +3,14 @@
 Plugin Name: Polling Widget: Ranker Lists
 Plugin URI: http://www.ranker.com/widget
 Description: Use the Ranker polling widget to create a custom "ranking poll" -a highly engaging crowdsourced list that will increase time on page by 125% and commenting 3X.
-Version: 2.2.3
+Version: 3.0.0
 Author: Ranker, Inc
 Author URI: http://www.ranker.com
 License: GPL2
 */
 
 /*	
-	Copyright 2012-2014  Ranker Inc  (email : feedback@ranker.com)
+	Copyright 2012-2015  Ranker Inc  (email : feedback@ranker.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -33,15 +33,27 @@ License: GPL2
  */
 
 //Define Constants
-define( 'RNKRWP_VERSION', '2.2.3' );
-define( 'RNKRWP_REQUIRED_WP_VERSION', '3.4' );
+define( 'RNKRWP_VERSION', '3.0.0' );
+define( 'RNKRWP_REQUIRED_WP_VERSION', '4.0' );
 
-if(!defined( 'RNKRWP_PLUGIN_BASENAME' )) define( 'RNKRWP_PLUGIN_BASENAME', plugin_basename(__FILE__) );
-if(!defined( 'RNKRWP_PLUGIN_NAME' )) define( 'RNKRWP_PLUGIN_NAME', trim(dirname(RNKRWP_PLUGIN_BASENAME), '/') );
-if(!defined( 'RNKRWP_PLUGIN_DIR' )) define( 'RNKRWP_PLUGIN_DIR', WP_PLUGIN_DIR.'/'.RNKRWP_PLUGIN_NAME );
-if(!defined( 'RNKRWP_PLUGIN_URL' )) define( 'RNKRWP_PLUGIN_URL', WP_PLUGIN_URL.'/'.RNKRWP_PLUGIN_NAME );
-if(!defined( 'RNKRWP_PLUGIN_ADMIN_DIR' )) define( 'RNKRWP_PLUGIN_ADMIN_DIR', RNKRWP_PLUGIN_DIR.'/admin' );
-if(!defined( 'RNKRWP_PLUGIN_INC_DIR' )) define( 'RNKRWP_PLUGIN_INC_DIR', RNKRWP_PLUGIN_DIR.'/includes' );
+if( !defined( 'RNKRWP_PLUGIN_BASENAME' ) ){
+	define( 'RNKRWP_PLUGIN_BASENAME', plugin_basename(__FILE__) );
+}
+if( !defined( 'RNKRWP_PLUGIN_NAME' ) ){
+	define( 'RNKRWP_PLUGIN_NAME', trim(dirname(RNKRWP_PLUGIN_BASENAME), '/') );
+}
+if( !defined( 'RNKRWP_PLUGIN_DIR' ) ){
+	define( 'RNKRWP_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . RNKRWP_PLUGIN_NAME );
+}
+if( !defined( 'RNKRWP_PLUGIN_URL' ) ){
+	define( 'RNKRWP_PLUGIN_URL', WP_PLUGIN_URL . '/' . RNKRWP_PLUGIN_NAME );
+}
+if( !defined( 'RNKRWP_PLUGIN_ADMIN_DIR' ) ){
+	define( 'RNKRWP_PLUGIN_ADMIN_DIR', RNKRWP_PLUGIN_DIR . '/admin' );
+}
+if( !defined( 'RNKRWP_PLUGIN_INC_DIR' ) ){
+	define( 'RNKRWP_PLUGIN_INC_DIR', RNKRWP_PLUGIN_DIR . '/includes' );
+}
 
 /**
  * Init Plugin
@@ -52,21 +64,24 @@ function rnkrwp_init(){
 
 	//Create options array
 	$options = array(
-					'size_rows'					=> '20',
-					'size_rows_all'				=> false,
-					'header_show_name'			=> true,
-					'header_show_image'			=> false,
-					'header_show_username'		=> false,
-					'header_show_criteria'		=> false,
-					'header_bgcolor'			=> 'ffffff',
-					'header_fontcolor'			=> '000000',
-					'header_fontface'			=> 'arial',
-					'list_displaythumbnails'	=> false,
-					'list_displaydescriptions'	=> true,
-					'list_slidebgcolor'			=> 'ffffff',
-					'list_fontcolor'			=> '000000',
-					'list_fontface'				=> 'arial',
-					'footer_bgcolor'			=> '5c5b5b' );
+		'size_rows'					=> '20',
+		'size_rows_all'				=> false,
+		'header_show_name'			=> true,
+		'header_show_image'			=> false,
+		'header_show_username'		=> false,
+		'header_show_criteria'		=> false,
+		'header_bgcolor'			=> 'ffffff',
+		'header_fontcolor'			=> '000000',
+		'header_fontface'			=> 'georgia',
+		'list_displaythumbnails'	=> false,
+		'list_displaydescriptions'	=> true,
+		'list_slidebgcolor'			=> '000000',
+		'list_fontcolor'			=> '000000',
+		'list_fontface'				=> 'arial',
+		'footer_bgcolor'			=> 'ffffff',
+		'footer_fontcolor'			=> '000000',
+		'footer_sharing'			=> true
+	);
 	
 	//Store options if they don't exist
 	add_option( 'rnkrwp', $options );
@@ -79,15 +94,15 @@ function rnkrwp_init(){
  */
 add_action( 'init', 'rnkrwp_load_plugin_textdomain' );
 function rnkrwp_load_plugin_textdomain(){
-	load_plugin_textdomain( 'rnkrwp', false, RNKRWP_PLUGIN_DIR.'/languages' );
+	load_plugin_textdomain( 'rnkrwp', false, RNKRWP_PLUGIN_DIR . '/languages' );
 }
 
 //Load Controllers
 if( is_admin() ){
-	require_once RNKRWP_PLUGIN_ADMIN_DIR.'/admin.php';
+	require_once RNKRWP_PLUGIN_ADMIN_DIR . '/admin.php';
 }
 else{
-	require_once RNKRWP_PLUGIN_INC_DIR.'/controller.php';
+	require_once RNKRWP_PLUGIN_INC_DIR . '/controller.php';
 }
 
 ?>

@@ -2,9 +2,9 @@
 Contributors: paulranker
 Donate link: http://www.ranker.com/
 Tags: poll, polls, polling, survey, list, lists, rate, ranking, Ranker, vote, voting, community, sidebar
-Requires at least: 3.4
-Tested up to: 4.2
-Stable tag: 2.2.3
+Requires at least: 4.0
+Tested up to: 4.3
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,10 +20,12 @@ The plugin comes with a built in shortcode generator, you only need the URL of t
 = How it works =
 1. Find a ranking you want your visitors to vote on from the [Ranker.com](http://www.ranker.com/ "Ranker") site, or create a new one there. 
 2. Copy the URL 
-3. Enter that URL into Settings->Ranker Options->Shortcodes
-4. Put that shortcode into any post. 
+3. Enter that URL into Tools->Ranker Shortcodes
+4. Put that shortcode into any post.
 
 Multiple shortcodes can be used per post.
+
+Configure your site-wide display options via Settings->Ranker Widget
 
 For more information please see : [Ranker Widget FAQ](http://www.ranker.com/list/the-ranker-widget-frequently-asked-questions/ranker?limit=25 "Widget FAQ")
 
@@ -32,16 +34,16 @@ For more information please see : [Ranker Widget FAQ](http://www.ranker.com/list
 
 1. Upload the 'rnkr-wp' folder to the '/wp-content/plugins/' directory (or install via the Plugins Add New menu).
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Set required options though admin menu.
-4. Place generated short codes in your posts.
+3. Set required options though admin menu (Settings->Ranker Widget).
+4. Place generated shortcodes (Tools->Ranker Shortcodes) in your posts.
 
 == Frequently Asked Questions ==
 
 = How do I create a short code for my posts? =
-That's easy! Once the plugin is installed and activated head to the settings page and switch to the 'shortcodes' tab. Now find the list you want to embed on [Ranker.com](http://Ranker.com/ "List the universe"), copy it's full URL (I.E. http://www.ranker.com/crowdranked-list/my-favorite-cartoons-of-all-time) and paste that into the input on the short codes page. We do some magic and then the usable short code for that list will be displayed below.
+That's easy! Once the plugin is installed and activated head to the shortcode creation tool at Tools->Ranker Shortcodes. Now find the list you want to embed on [Ranker.com](http://Ranker.com/ "List the universe"), copy it's full URL (I.E. http://www.ranker.com/crowdranked-list/my-favorite-cartoons-of-all-time) and paste that into the input on the short codes page. We do some magic and then the usable short code for that list will be displayed below.
 
-= Will my old V1 shortcodes work with the V2 plugin? =
-Yes they will! Version 2 is fully backwards compatible, all older short codes will continue to work with the new widget.
+= Will my old V1/V2 shortcodes work with the V3 plugin? =
+Yes they will! Version 3 is fully backwards compatible, all older short codes will continue to work with the new widget.
 
 = I've found styling errors with the widget, what should I do? =
 Some themes are built to override global style definitions, sometimes these styles can cause layout issues with our widget. While we've done our best to avoid themes adjusting the widget display, on occasion one can slip through. If you find any styling errors with the widget in your theme, please leave a support ticket and we'll get them fixed as soon as possible.
@@ -58,13 +60,23 @@ For more information on using Ranker widgets please see the [Widget Info page](h
 
 == Screenshots ==
 
-1. Example of the Ranker plugin options screen.
-2. Example of the Ranker plugin short code creation screen.
-3. Example of Ranker widget in post loaded via shortcode.
-4. Example of customized widget in post loaded via shortcode.
+1. Example of the Ranker plugin Settings screen.
+2. Example of the Ranker plugin Shortcode creation screen.
+3. Example of Ranker Poll widget in post loaded via shortcode.
+4. Example of Ranker Slideshow widget in post loaded via shortcode.
+5. Example of customized Ranker widget in post loaded via shortcode.
 
 
 == Changelog ==
+
+= 3.0.0 =
+Version 3 of the Ranker widget has been released, containing major improvements.
+- Rewritten large parts of admin and post code for increased render speed and efficiency. 
+- Updated widget embeds to use OEmbed protocol (removes the need to load widget scripts on each page).
+- Moved Shortcode creation from Settings to Tool menus.
+- Simplifed Shortcode output and usage requirements. 
+- Updated Settings and Tools visual style to match Wordpress defaults and respect your theme choices.
+- Added new options for Footer display and customization.
 
 = 2.2.3 =
 - Bug fix for an internal CDN issue where certain widgets were rendering blank.
@@ -94,6 +106,9 @@ The version 2 polling widget has been completely rewritten from the ground up us
 
 
 == Upgrade Notice ==
+
+= 3.0.0 =
+Version 3 of the Ranker widget has been released, containing major improvements. Recommended for all users.
 
 = 2.2.3 =
 Bug fix for blank widgets, recommended for all users.

@@ -15,13 +15,13 @@ function rnkrwp_js_utils(){
 	$rnkrwp_prefs = get_option( 'rnkrwp' );
 	
 	//Build util HTML
-	$utilHTML = '<script>';
+	$utilHTML = "<script>";
 	//Setup RNKRWP JS
-	$utilHTML .= 'var RNKRWP = {};';
+	$utilHTML .= "var RNKRWP = {};";
 	//Bind page to JS object
-	$utilHTML .= "RNKRWP.page = '".$_GET['page']."';";
+	$utilHTML .= "RNKRWP.page = '" . $_GET[ 'page' ] . "';";
 	//Bind show_link to JS object
-	$utilHTML .= "RNKRWP.rows = '".$rnkrwp_prefs['size_rows']."';";
+	$utilHTML .= "RNKRWP.rows = '" . $rnkrwp_prefs[ 'size_rows' ] . "';";
 	$utilHTML .= "</script>\n";
 	
 	//Output HTML
@@ -30,19 +30,4 @@ function rnkrwp_js_utils(){
 }
 rnkrwp_js_utils();
 
-/**
- * Is Boolean
- * @desc Converts PHP boolean values to expected JS boolean names.
- * @param {string} $value
- */
-function rnkrwp_is_boolean( $value ){
-	
-	if( $value && strtolower( $value ) !== "false" ){
-		return true;
-	}
-	else{
-		return false;
-	}
-	
-}
 ?>

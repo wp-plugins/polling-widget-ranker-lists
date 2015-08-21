@@ -6,7 +6,9 @@
  */
 
 //Check for uninstall interface
-if( !defined( 'WP_UNINSTALL_PLUGIN' ) ) exit();
+if( !defined( 'WP_UNINSTALL_PLUGIN' ) ){
+	exit();
+}
 
 //Uninstall plugin options
 delete_option( 'rnkrwp' );
