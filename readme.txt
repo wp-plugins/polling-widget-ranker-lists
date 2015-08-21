@@ -71,12 +71,14 @@ For more information on using Ranker widgets please see the [Widget Info page](h
 
 = 3.0.0 =
 - Version 3 of the Ranker widget has been released, containing major improvements.
-- Rewritten large parts of admin and post code for increased render speed and efficiency. 
+- Large parts of admin and post code have been rewritten for increased render speed and efficiency. 
 - Updated widget embeds to use OEmbed protocol (removes the need to load widget scripts on each page).
 - Moved Shortcode creation from Settings to Tool menus.
-- Simplifed Shortcode output and usage requirements. 
+- Simplifed Shortcode output and usage requirements (fully backwards compatible with version 1 and 2 shortcodes). 
 - Updated Settings and Tools visual style to match Wordpress defaults and respect your theme choices.
 - Added new options for Footer display and customization.
+- Updated FAQ to reflect new version and admin changes.
+- Updated screenshots to reflect current widget design and admin options.
 
 = 2.2.3 =
 - Bug fix for an internal CDN issue where certain widgets were rendering blank.
