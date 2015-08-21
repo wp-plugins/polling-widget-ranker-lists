@@ -70,7 +70,7 @@ For more information on using Ranker widgets please see the [Widget Info page](h
 == Changelog ==
 
 = 3.0.0 =
-Version 3 of the Ranker widget has been released, containing major improvements.
+- Version 3 of the Ranker widget has been released, containing major improvements.
 - Rewritten large parts of admin and post code for increased render speed and efficiency. 
 - Updated widget embeds to use OEmbed protocol (removes the need to load widget scripts on each page).
 - Moved Shortcode creation from Settings to Tool menus.
