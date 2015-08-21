@@ -19,7 +19,11 @@
 /* Options items */
 #rnkrWrap ul{ margin-left:15px; }
 	#rnkrWrap ul li{ min-height:26px; font-size:1.1em; line-height:1.6em; }
-		#rnkrWrap ul li input{ height:37px; margin:0; vertical-align:middle; border:1px solid rgba(174,174,174,1); }
+		#rnkrWrap ul li input{ margin:0; vertical-align:middle; border:1px solid rgba(174,174,174,1); }
+		#rnkrWrap ul li input[type=text],
+		#rnkrWrap ul li input[type=password],
+		#rnkrWrap ul li input[type=submit],
+		#rnkrWrap ul li input[type=button]{ height:37px; }
 		#rnkrWrap ul li select{ height:37px; vertical-align:middle; border:1px solid rgba(174,174,174,1); }
 			#rnkrWrap ul li select option{ padding-right:15px; }
 		#rnkrWrap ul li .chip{ display:inline-block; margin-bottom:-4px; border:1px solid rgba(51,51,51,1); width:18px; height:18px; }
