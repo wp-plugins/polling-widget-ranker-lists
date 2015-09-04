@@ -4,7 +4,7 @@ Donate link: http://www.ranker.com/
 Tags: poll, polls, polling, survey, list, lists, rate, ranking, Ranker, vote, voting, community, sidebar
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,9 @@ For more information on using Ranker widgets please see the [Widget Info page](h
 
 == Changelog ==
 
+= 3.0.1 =
+- Fixes issue with font face selection options.
+
 = 3.0.0 =
 - Version 3 of the Ranker widget has been released, containing major improvements.
 - Large parts of admin and post code have been rewritten for increased render speed and efficiency. 
@@ -108,6 +111,9 @@ The version 2 polling widget has been completely rewritten from the ground up us
 
 
 == Upgrade Notice ==
+
+= 3.0.1 =
+Fixes issue with font face selection options.
 
 = 3.0.0 =
 Version 3 of the Ranker widget has been released, containing major improvements. Recommended for all users.
