@@ -95,7 +95,7 @@ function rnkrwp_build_options(){
 			<input type="text" id="rnkrwp_header-fontcolor" name="header_fontcolor" value="<?= $header_fontcolor; ?>" size="10"/>&nbsp;&nbsp;
 			<select name="header_fontface">
 				<option<?= ( $header_fontface == 'arial' ? ' selected="selected"' : '' ); ?>>arial</option>
-				<option<?= ( $header_fontface == 'helevtica' ? ' selected="selected"' : '' ); ?>>helevtica</option>
+				<option<?= ( $header_fontface == 'helvetica' ? ' selected="selected"' : '' ); ?>>helvetica</option>
 				<option<?= ( $header_fontface == 'verdana' ? ' selected="selected"' : '' ); ?>>verdana</option>
 				<option<?= ( $header_fontface == 'geneva' ? ' selected="selected"' : '' ); ?>>geneva</option>
 				<option<?= ( $header_fontface == 'times' ? ' selected="selected"' : '' ); ?>>times</option>
@@ -129,7 +129,7 @@ function rnkrwp_build_options(){
 			<span class="picker" id="rnkrwp_list-fontcolor_pick"></span> 
 			<input type="text" id="rnkrwp_list-fontcolor" name="list_fontcolor" value="<?= $list_fontcolor; ?>" size="10"/>&nbsp;&nbsp;<select name="list_fontface">
 				<option<?= ( $list_fontface == 'arial' ? ' selected="selected"' : '' ); ?>>arial</option>
-				<option<?= ( $list_fontface == 'helevtica' ? ' selected="selected"' : '' ); ?>>helevtica</option>
+				<option<?= ( $list_fontface == 'helvetica' ? ' selected="selected"' : '' ); ?>>helvetica</option>
 				<option<?= ( $list_fontface == 'verdana' ? ' selected="selected"' : '' ); ?>>verdana</option>
 				<option<?= ( $list_fontface == 'geneva' ? ' selected="selected"' : '' ); ?>>geneva</option>
 				<option<?= ( $list_fontface == 'times' ? ' selected="selected"' : '' ); ?>>times</option>
