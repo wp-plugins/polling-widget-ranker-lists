@@ -3,7 +3,7 @@ Contributors: paulranker
 Donate link: http://www.ranker.com/
 Tags: poll, polls, polling, survey, list, lists, rate, ranking, Ranker, vote, voting, community, sidebar
 Requires at least: 4.0
-Tested up to: 4.3
+Tested up to: 4.4
 Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
